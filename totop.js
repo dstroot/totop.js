@@ -70,19 +70,14 @@
             // Show the icon if the window has been scrolled down more than the minimum distance
             if ($(this).scrollTop() > settings.minDistanceFromTop) {
                 $(containerIdHash).fadeIn(settings.fadeInDelay);
-                console.log("Fade in");
-                console.log(settings.minDistanceFromTop);
             } else {
                 $(containerIdHash).fadeOut(settings.fadeOutDelay);
-                console.log("Fade Out");
-                console.log(containerIdHash);
             }
 
             // Scroll to top on click
             $(containerIdHash).click(function (e) {
                 e.preventDefault();
                 $('html, body').stop().animate({ scrollTop: 0 }, settings.scrollSpeed, settings.easingType);
-                console.log("Click");
             });
 
         });
